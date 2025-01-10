@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey202020">#202020</color>
+    <color name="primary_color">#17191D</color>
+    <color name="white54">#8AFFFFFF</color>
+    <color name="dark_grey">#2F3039</color>
+    <color name="redE72847">#E72847</color>
+    <color name="white707070">#707070</color>
+    <color name="grey24272C">#24272C</color>
+    <color name="pink">#FFC0CB</color>
+</resources>

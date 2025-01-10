@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/primary_color"
+    tools:context=".auth.SearchesActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/location"
+        android:textColor="@color/redE72847"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <View
+        android:id="@+id/vwLocation"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginHorizontal="@dimen/_9sdp"
+        android:background="@color/white707070"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLocation" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSelectState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/select_state"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vwLocation" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/edit"
+        android:textColor="@color/redE72847"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vwLocation" />
+
+    <View
+        android:id="@+id/vwSelectState"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_9sdp"
+        android:background="@color/white707070"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSelectState" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSelectCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/select_city"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vwSelectState" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRadius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/radius"
+        android:textColor="@color/redE72847"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSelectCity" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/edit"
+       android:layout_marginEnd="@dimen/_10sdp"
+        android:textColor="@color/redE72847"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vwSelectState" />
+
+    <View
+        android:id="@+id/vwSelectCity"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_9sdp"
+        android:background="@color/white707070"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRadius" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivRectangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vwSelectCity"
+        android:layout_marginTop="@dimen/_20sdp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/ivRectangle"
+        app:layout_constraintStart_toStartOf="@id/ivRectangle"
+        app:layout_constraintEnd_toEndOf="@id/ivRectangle"
+        app:layout_constraintBottom_toBottomOf="@id/ivRectangle"
+        android:src="@drawable/red_dot"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvGeneres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/generes"
+        android:textColor="@color/redE72847"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivRectangle" />
+
+    <View
+        android:id="@+id/vwGeneres"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/white707070"
+        android:layout_marginHorizontal="@dimen/_9sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGeneres" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGridRecycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vwGeneres" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

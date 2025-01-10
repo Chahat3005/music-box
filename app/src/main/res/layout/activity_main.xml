@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dlDrawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.activities.MainActivity">
+
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nvSideNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/redE72847"
+        android:layout_gravity="start"
+        app:menu="@menu/navigation_item" />
+
+    <LinearLayout
+        android:id="@+id/llLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/flFrameContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bnBottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_nav_menu" />
+
+
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

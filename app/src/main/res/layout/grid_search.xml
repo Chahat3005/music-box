@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_4sdp"
+    android:background="@color/redE72847"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_3sdp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/poppins_regular"
+        android:padding="@dimen/_4sdp"
+        android:text="@string/title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_8ssp" />
+
+</LinearLayout>

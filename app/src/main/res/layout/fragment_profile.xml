@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color">
+
+
+    <FrameLayout
+        android:id="@+id/ivFrameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+
+            android:id="@+id/ivBackground_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/background_icon"
+            android:src="@drawable/image_profile" />
+
+        <ImageView
+            android:id="@+id/foreground_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/foreground_icon"
+            android:src="@drawable/camera_icon" />
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivFrameLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:paddingBottom="@dimen/_20sdp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:drawableTint="@color/grey24272C"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:background="@drawable/edittext_background"
+                android:drawableStart="@drawable/account_circle"
+                android:drawablePadding="@dimen/_8sdp"
+                android:fontFamily="@font/ibm_regular"
+                android:hint="@string/name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey24272C"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etVenueName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:background="@drawable/edittext_background"
+                android:drawableStart="@drawable/account_circle"
+                android:drawablePadding="@dimen/_8sdp"
+                android:fontFamily="@font/ibm_regular"
+                android:hint="@string/venue_name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:drawableTint="@color/grey24272C"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey24272C"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etName" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clRecyclerView"
+                android:layout_width="match_parent"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_height="@dimen/_40sdp"
+                app:layout_constraintTop_toBottomOf="@id/etVenueName">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMusic"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:paddingHorizontal="@dimen/_16sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+            </androidx.recyclerview.widget.RecyclerView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etLocation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:drawableTint="@color/grey24272C"
+                android:background="@drawable/edittext_background"
+                android:drawableStart="@drawable/location"
+                android:drawablePadding="@dimen/_8sdp"
+                android:fontFamily="@font/ibm_regular"
+                android:hint="@string/location"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey24272C"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clRecyclerView" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etBio"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/edittext_background"
+                android:drawableStart="@drawable/bio_icon"
+                android:drawablePadding="@dimen/_8sdp"
+                android:fontFamily="@font/ibm_regular"
+                android:hint="@string/bio"
+                android:drawableTint="@color/grey24272C"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey24272C"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etLocation" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSearchTextLinks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/ibm_regular"
+                android:text="@string/search_media_links"
+                android:textColor="@color/grey24272C"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etBio" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etCapacity"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:background="@drawable/edittext_background"
+                android:drawableStart="@drawable/capacity"
+                android:drawablePadding="@dimen/_8sdp"
+                android:fontFamily="@font/ibm_regular"
+                android:drawableTint="@color/grey24272C"
+                android:hint="@string/capacity"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey24272C"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSearchTextLinks" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etEventCalender"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:drawableTint="@color/grey24272C"
+                android:background="@drawable/edittext_background"
+                android:drawableStart="@drawable/event_calender"
+                android:drawableEnd="@drawable/arrow_down"
+                android:drawablePadding="@dimen/_8sdp"
+                android:fontFamily="@font/ibm_regular"
+                android:hint="@string/event_calender"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey24272C"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etCapacity" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etLink"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:background="@drawable/edittext_background"
+                android:fontFamily="@font/ibm_regular"
+                android:hint="@string/https_facebook_com"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey24272C"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etEventCalender" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etAdd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:background="@drawable/edittext_background"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etLink" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnAddIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/add_icon"
+                app:layout_constraintBottom_toBottomOf="@id/etAdd"
+                app:layout_constraintEnd_toEndOf="@id/etAdd"
+                app:layout_constraintStart_toStartOf="@id/etAdd"
+                app:layout_constraintTop_toTopOf="@id/etAdd" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:fontFamily="@font/ibm_semibold"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/redE72847"
+                android:textSize="@dimen/_10ssp"
+                android:layout_marginBottom="@dimen/_80sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etAdd" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

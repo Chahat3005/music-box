@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWelcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:fontFamily="@font/sfp_medium"
+        android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_pellentesque_in_dolor_eget_leo_cursus_pretium_aenean_dignissim_luctus_urna_eu_sollicitudin_donec_consectetur_sed_risus_ac_dignissim_morbi_et_purus_consectetur_porttitor_nibh_vel_condimentum_tellus_nunc_lobortis_augue_quis_nibh_mollis_accumsan"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

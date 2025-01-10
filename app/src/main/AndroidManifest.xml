@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/transparent_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/splashh"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MusicBox"
+        tools:targetApi="31">
+        <activity
+            android:name=".auth.SearchesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.SubscriptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.ScanCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.SearchBarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.EventsAddedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.VerificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.WelcomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dashboard.activities.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

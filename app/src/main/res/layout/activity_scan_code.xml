@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color"
+    tools:context=".auth.ScanCodeActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvScanCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:fontFamily="@font/sfp_medium"
+        android:text="@string/scan_qr_below"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLorem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/sfp_medium"
+        android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_pellentesque_in_dolor_eget_leo_cursus_pretium_aenean_dignissim_luctus_urna_eu_sollicitudin_donec_consectetur_sed_risus_ac_dignissim_morbi_et_purus_consectetur_porttitor_nibh_vel_condimentum_tellus_nunc_lobortis_augue_quis_nibh_mollis_accumsan"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvScanCode" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivScanQR"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:src="@drawable/qr_code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLorem" />
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginHorizontal="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:backgroundTint="@color/redE72847"
+        android:fontFamily="@font/ibm_semibold"
+        android:text="@string/close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivScanQR" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

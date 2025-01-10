@@ -1,0 +1,9 @@
+<resources>
+    <style name="CustomCalendarView" parent="android:Widget.CalendarView">
+        <item name="android:textAppearance">@style/CalendarTextPink</item>
+    </style>
+
+    <style name="CalendarTextPink" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/pink</item>
+    </style>
+</resources>
