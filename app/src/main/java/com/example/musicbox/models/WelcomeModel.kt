@@ -1,5 +1,7 @@
 package com.example.musicbox.models
 
+import com.google.gson.annotations.SerializedName
+
 
 data class WelcomeModel(
     val title: String
@@ -17,7 +19,7 @@ data class NotificationItem(
 
 data class MusicBand(
     val title: String,
-    val text:String,
+    val text: String,
     val imageResID: Int? = null
 )
 
@@ -113,4 +115,33 @@ data class UserAuthResponseData(
     val biography: String?,
     val is_transfer_active: Boolean?,
     val social_link: ArrayList<String>,
+)
+
+data class SignupRequest(
+    val fullName: String,
+    val email: String,
+    val password: String
+)
+
+data class ForgotPasswordRequest(
+    val email: String,
+    val purpose: Int
+)
+
+data class VerifyRequest(
+    val otp: String,
+    val token : String
+)
+
+data class ResetRequest(
+    val password: String,
+    val token : String
+)
+data class ChangePasswordResponse (
+
+    @SerializedName("success" ) var success : Boolean? = null,
+    @SerializedName("status"  ) var status  : Int?     = null,
+    @SerializedName("message" ) var message : String?  = null,
+    @SerializedName("badge"   ) var badge   : Int?     = null
+
 )

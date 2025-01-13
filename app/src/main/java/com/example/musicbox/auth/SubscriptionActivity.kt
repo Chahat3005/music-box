@@ -35,9 +35,7 @@ class SubscriptionActivity : AppCompatActivity(),View.OnClickListener {
             R.id.ivBackButton -> {
                 onBackPressedDispatcher.onBackPressed()
             }
-            R.id.ivOption -> {
-                startActivity(Intent(this,SearchBarActivity::class.java))
-            }
+
         }
     }
 

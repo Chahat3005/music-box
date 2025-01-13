@@ -50,9 +50,6 @@ class WelcomeActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, SearchesActivity::class.java))
             }
 
-            R.id.ivOption -> {
-                startActivity(Intent(this, SearchBarActivity::class.java))
-            }
 
             R.id.ivBackButton -> {
                 onBackPressedDispatcher.onBackPressed()

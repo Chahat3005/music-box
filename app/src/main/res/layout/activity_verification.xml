@@ -127,6 +127,7 @@
         android:backgroundTint="@color/redE72847"
         android:fontFamily="@font/ibm_semibold"
         android:text="@string/verify"
+        android:textColor="@color/white"
         android:background="@drawable/edittext_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

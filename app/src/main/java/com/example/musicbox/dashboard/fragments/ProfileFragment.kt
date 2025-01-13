@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.musicbox.R
 import com.example.musicbox.adapter.MusicVenueAdapter
 import com.example.musicbox.auth.EventsAddedActivity
-import com.example.musicbox.auth.SearchBarActivity
 import com.example.musicbox.databinding.FragmentProfileBinding
 import com.example.musicbox.models.MusicBand
 

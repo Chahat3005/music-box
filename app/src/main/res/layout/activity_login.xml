@@ -39,7 +39,7 @@
                 android:layout_marginHorizontal="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_24sdp"
                 android:background="@drawable/edittext_background"
-                android:drawableStart="@drawable/profile_icon"
+                android:drawableStart="@drawable/email"
                 android:drawablePadding="@dimen/_8sdp"
                 android:drawableTint="@color/grey24272C"
                 android:fontFamily="@font/ibm_regular"

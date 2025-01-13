@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.musicbox.R
 import com.example.musicbox.adapter.SavedEventsAdapter
-import com.example.musicbox.auth.SearchBarActivity
 import com.example.musicbox.databinding.FragmentCalenderBinding
 import com.example.musicbox.models.SavedItems
 

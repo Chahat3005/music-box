@@ -31,10 +31,6 @@ class ScanCodeActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, MainActivity::class.java))
             }
 
-            R.id.ivOption -> {
-                startActivity(Intent(this, SearchBarActivity::class.java))
-            }
-
             R.id.ivBackButton -> {
                 onBackPressedDispatcher.onBackPressed()
             }

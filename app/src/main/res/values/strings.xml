@@ -87,4 +87,9 @@
     <string name="about_us">About Us</string>
     <string name="help">Help</string>
     <string name="delete_account">Delete Account</string>
+    <string name="recover_password">Recover Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="current_password">Current Password</string>
+    <string name="continues">Continue</string>
 </resources>

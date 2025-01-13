@@ -1,9 +1,7 @@
 package com.example.musicbox.auth
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +10,7 @@ import com.example.musicbox.dashboard.activities.MainActivity
 import com.example.musicbox.databinding.ActivityLoginBinding
 import com.example.musicbox.models.LoginRequest
 import com.example.musicbox.models.LoginResponse
+import com.example.musicbox.network.ApiInterface
 import com.example.musicbox.network.RetrofitClient
 import retrofit2.Call
 import retrofit2.Callback
@@ -24,18 +23,16 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         click()
-
-
     }
 
     private fun click() {
         binding.btLogin.setOnClickListener(this@LoginActivity)
         binding.btSignUpWithEmail.setOnClickListener(this)
+        binding.tvForgetPassword.setOnClickListener(this)
     }
 
     private fun loginApi(username: String, password: String) {
         val apiInterface = RetrofitClient.getInstance().create(ApiInterface::class.java)
-
         apiInterface.loginApi(LoginRequest(email = username, password = password))
             .enqueue(object :
                 Callback<LoginResponse> {
@@ -104,8 +101,14 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         when (v?.id) {
             R.id.btLogin -> {
                 if (checkValidation()) {
-                    loginApi(binding.etUsername.text.toString().trim(),binding.etPassword.text.toString().trim())
+                    loginApi(
+                        binding.etUsername.text.toString().trim(),
+                        binding.etPassword.text.toString().trim()
+                    )
                 }
+            }
+            R.id.tvForgetPassword -> {
+                startActivity(Intent(this,ForgotPasswordActivity::class.java))
             }
 
             R.id.btSignUpWithEmail -> {
